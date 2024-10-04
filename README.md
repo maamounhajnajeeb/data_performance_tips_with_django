@@ -9,7 +9,7 @@ There are three main sections in this README:</br>
 
 ## How to clone this Repo to go through the tutorial
 `git clone`</br>
-command to load data
+command to load data (you can see a video of how I build fixture data very fast with mockarro from [here] ())
 
 ## Tutorial Content
 ### Intro
