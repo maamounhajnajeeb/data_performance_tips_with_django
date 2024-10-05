@@ -1,4 +1,4 @@
-This repo is inspired by this [tutoril](https://youtu.be/tloKxFgom58?si=Mb-AheSQJLU1AHkD)
+This repo is inspired by this [tutorial](https://youtu.be/tloKxFgom58?si=Mb-AheSQJLU1AHkD)
 Actually, it's practical guide for it
 
 There are three main sections in this README:</br>
@@ -9,7 +9,9 @@ There are three main sections in this README:</br>
 
 ## How to clone this Repo to go through the tutorial
 `git clone`</br>
-command to load data (you can see a video of how I build fixture data very fast with mockarro from [here] ())
+`pip install requirements.txt`</br>
+`py manage.py migrate`</br>
+`py manage.py loaddata faked_users faked_analytics`(you can see a video of how I build fixture data very fast with mockarro from [here] ())</br>
 
 ## Tutorial Content
 ### Intro
