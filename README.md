@@ -11,7 +11,7 @@ There are three main sections in this README:</br>
 `git clone`</br>
 `pip install requirements.txt`</br>
 `py manage.py migrate`</br>
-`py manage.py loaddata faked_users faked_analytics`(you can see a video of how I build fixture data very fast with mockarro from [here] ())</br>
+`py manage.py loaddata faked_users faked_analytics` (you can see a video of how I build fixture data very fast with mockaroo from [here]())</br>
 
 ## Tutorial Content
 ### Intro
@@ -24,6 +24,16 @@ General talk about the Django project used in the tutorial and Data performance 
 
 ### Querying (Pagination, Annotations and Materialized Views)
 > Time-line: start at: 03:19, end at: 25:14
+
+#### Pagination:
+* The first type of pagiantion we should know about is \~ `offset pagination` \~
+<ins>url</ins>: http://127.0.0.1:8000/analytics/events_offset_paginated/?page=1</br>
+<ins>view</ins>: analytics/views -> events_offset_paginated
+
+#### N+1 problem
+* we have to avoid N+1 problem when querying data from a table that has relationships like M2M, Foreign-Key and O2O with other tables.</br>
+You can read more about N+1 problem from [here]().</br>
+select_related and prefetch_related: django docs [here]() and [here]().</br>
 
 ## Repo Specification
 - Database: PostgreSQL

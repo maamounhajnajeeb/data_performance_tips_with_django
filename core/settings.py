@@ -129,4 +129,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# not built in with django added through the project
 AUTH_USER_MODEL = "users.User"
+EVENT_PER_PAGE = 20
