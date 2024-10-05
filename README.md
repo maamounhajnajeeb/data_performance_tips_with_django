@@ -34,6 +34,8 @@ General talk about the Django project used in the tutorial and Data performance 
 * we have to avoid N+1 problem when querying data from a table that has relationships like M2M, Foreign-Key and O2O with other tables.</br>
 You can read more about N+1 problem from [here]().</br>
 select_related and prefetch_related: django docs [here]() and [here]().</br>
+<ins>view</ins>: analytics\
+<ins>url</ins>: analytics\
 
 ## Repo Specification
 - Database: PostgreSQL

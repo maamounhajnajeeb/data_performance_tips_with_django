@@ -9,7 +9,7 @@ from analytics.models import Event
 def all_events(request: HttpRequest):
     all_events = Event.objects.all()
 
-    return render(request=request, template_name="all_events.html", context={"all_events": all_events})
+    return render(request=request, template_name="analytics/all_events.html", context={"all_events": all_events})
 
 
 def events_offset_paginated(request: HttpRequest):
