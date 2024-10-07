@@ -39,7 +39,7 @@ General talk about the Django project used in the tutorial and Data performance 
 * we have to avoid N+1 problem when querying data from a table that has relationships like M2M, Foreign-Key and O2O with other tables.</br>
 You can read more about N+1 problem from [here]().</br>
 select_related and prefetch_related: django docs [here](https://docs.djangoproject.com/en/5.1/ref/models/querysets/#select-related) and [here](https://docs.djangoproject.com/en/5.1/ref/models/querysets/#prefetch-related).</br>
-<ins>view</ins>: analytics/views.py -> events_with_related_users
+<ins>view</ins>: analytics/views.py -> events_with_related_users</br>
 <ins>url</ins>: http://127.0.0.1:8000/analytics/events_with_related_users/?page=2
 
 #### Annotations
@@ -53,6 +53,8 @@ Django docs [here](https://docs.djangoproject.com/en/5.1/topics/db/aggregation/#
 - build cursor pagination
 - Add kolo support
 - make django version 4.2 L.T.S
+- Add N+1 problem resource
+- build fake data youtube video
 
 ## Repo Specification
 - Database: PostgreSQL
