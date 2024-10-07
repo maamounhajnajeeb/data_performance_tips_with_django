@@ -5,7 +5,8 @@ There are three main sections in this README:</br>
 1. How to contribute</br>
 2. How to clone this repo and work with it</br>
 3. Tutorial Content (Tutorial Practical Walkthrough)</br>
-4. Repo Specification</br>
+4. ToDo list</br>
+5. Repo Specification</br>
 
 ## How to clone this Repo to go through the tutorial
 `git clone`</br>
@@ -42,9 +43,16 @@ select_related and prefetch_related: django docs [here](https://docs.djangoproje
 <ins>url</ins>: http://127.0.0.1:8000/analytics/events_with_related_users/?page=2
 
 #### Annotations
-Annotations is way to generate summary values for each object in QuerySet.</br>
+* Annotations is way to generate summary values for each object in QuerySet.</br>
 Django docs [here](https://docs.djangoproject.com/en/5.1/topics/db/aggregation/#generating-aggregates-for-each-item-in-a-queryset)</br>
 
+
+## ToDo list:
+- Generate more data (10000 rows)
+- work more on annotations section
+- build cursor pagination
+- Add kolo support
+- make django version 4.2 L.T.S
 
 ## Repo Specification
 - Database: PostgreSQL
