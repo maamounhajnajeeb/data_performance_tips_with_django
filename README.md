@@ -26,23 +26,25 @@ General talk about the Django project used in the tutorial and Data performance 
 ### Querying (Pagination, Annotations and Materialized Views)
 > Time-line: start at: 03:19, end at: 25:14
 
-#### Pagination:
-* The first type of pagiantion we should know about is \~ `offset pagination` \~
+### Pagination:
+#### Offset Pagination:
+* The first type of pagiantion we should know about is \~ `offset pagination` \~</br>
 <ins>url</ins>: http://127.0.0.1:8000/analytics/events_offset_paginated/?page=1</br>
-<ins>view</ins>: analytics/views -> events_offset_paginated
-
+<ins>view</ins>: analytics/views -> events_offset_paginated</br>
 * In \~ `offset pagination` \~ the database have to load all the data up until the offset specified value (depends on how deep pagination is) which is a problem when working with large data.
 * when you work with large number of data you have to work with another type of pagination called \~ `keyset pagination` \~ (also called cursor pagination).
-* The way \~ `keyset pagination` \~ works is using cursors, you can see good explanation of how this kind of paginators works from DRF docs [here](https://www.django-rest-framework.org/api-guide/pagination/#cursorpagination).
 
-#### N+1 problem
+#### Cursor Pagination (Keyset Pagination):
+* The way \~ `keyset pagination` \~ works is using cursors, you can see good explanation of how this kind of paginators works from PlanetSacle MySQL tutorial series [here](https://planetscale.com/learn/courses/mysql-for-developers/examples/cursor-pagination?autoplay=1).
+
+### N+1 problem
 * we have to avoid N+1 problem when querying data from a table that has relationships like M2M, Foreign-Key and O2O with other tables.</br>
 You can read more about N+1 problem from [here]().</br>
 select_related and prefetch_related: django docs [here](https://docs.djangoproject.com/en/5.1/ref/models/querysets/#select-related) and [here](https://docs.djangoproject.com/en/5.1/ref/models/querysets/#prefetch-related).</br>
 <ins>view</ins>: analytics/views.py -> events_with_related_users</br>
 <ins>url</ins>: http://127.0.0.1:8000/analytics/events_with_related_users/?page=2
 
-#### Annotations
+### Annotations
 * Annotations is way to generate summary values for each object in QuerySet.</br>
 Django docs [here](https://docs.djangoproject.com/en/5.1/topics/db/aggregation/#generating-aggregates-for-each-item-in-a-queryset)</br>
 

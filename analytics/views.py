@@ -31,6 +31,20 @@ def events_offset_paginated(request: HttpRequest):
         )
 
 
+def keyset_paginated_events(request: HttpRequest):
+    events = Event.objects.all().select_related("user")
+
+    paginated = Paginator(events, per_page=settings.EVENT_PER_PAGE)
+    page = request.GET.get("page", 1)
+    events = paginated.get_page(page)
+    
+    return render(
+        request=request,
+        template_name="analytics/offset_paginated_events.html",
+        context={"events": events}
+        )
+
+
 def events_with_related_users(request: HttpRequest):
     events = Event.objects.select_related("user")
 
