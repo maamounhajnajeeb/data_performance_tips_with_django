@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.core.paginator import Paginator
 
-from analytics.models import Event
+from .models import Event
 
 
 def all_events(request: HttpRequest):
