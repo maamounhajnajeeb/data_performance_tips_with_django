@@ -52,7 +52,7 @@ Django docs [here](https://docs.djangoproject.com/en/5.1/topics/db/aggregation/#
 ## ToDo list:
 - Generate more data (10000 rows)
 - work more on annotations section (build separate repo and work annotation and aggregation section from django docs)
-- build cursor pagination
+- build cursor pagination or countless pagination [blog](https://testdriven.io/blog/django-avoid-counting/)
 - Add kolo support
 - make django version 4.2 L.T.S
 - Add N+1 problem resource
