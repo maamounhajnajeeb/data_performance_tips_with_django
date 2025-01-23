@@ -33,6 +33,7 @@ INSTALLED_APPS = [
 
     # 3rd party apps
     "debug_toolbar",
+    "rest_framework",
 
     # local apps
     'apps.analytics.apps.AnalyticsConfig',
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.postgresql",
-        'NAME': 'db_performance',
+        'NAME': 'performance_tips',
         'HOST': 'localhost',
         'PORT': 5432,
         'PASSWORD': "MaamounHajNajeeb",
